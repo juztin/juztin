@@ -10,4 +10,4 @@ deploy:
     - script:
         name: trigger deploy
         code: |
-          curl https://svc.coral.blue/juztin/update/?token=$TOKEN&rev=$WERCKER_GIT_COMMIT
+          curl "https://svc.coral.blue/juztin/update/?token=$TOKEN&rev=$WERCKER_GIT_COMMIT"
