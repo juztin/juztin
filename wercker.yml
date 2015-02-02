@@ -5,3 +5,8 @@ build:
         version: 0.12
         theme: herring-cove
         flags: --buildDrafts=true
+deploy:
+  steps:
+    - script:
+      name: trigger update
+      code: curl https://svc.coral.blue/juztin/update/?token=$TOKEN&rev=$WERCKER_GIT_COMMIT
